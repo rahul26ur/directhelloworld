@@ -4,7 +4,7 @@ node{
     stage('SCM Checkout')
     {
         //git url: 'http://172.24.19.82/rahul_cept/dummy.git'
-        git credentialsId: 'GIT_CREDENTIALS', url: 'http://172.24.19.82/rahul_cept/helloworld.git'
+        git url: 'https://github.com/rahul26ur/directhelloworld.git'
     }
     
     
@@ -26,7 +26,7 @@ node{
           //sh "cd /var/lib/jenkins/workspace/rahjava8 \n /usr/bin/mvn clean package"
          //sh "cd /var/lib/jenkins/workspace/rahjava8 \n /usr/bin/mvn clean package  -Dstart-class=com.rah.rest.webservices.rahrestwebservices.helloworld"
          //sh "cd /var/lib/jenkins/workspace/rahjava7 \n /usr/bin/mvn clean package install"
-        sh "cd /var/lib/jenkins/workspace/rahhello1 \n /usr/bin/mvn clean install"
+        sh "cd /var/lib/jenkins/workspace/rahdirecthello \n /usr/bin/mvn clean install"
         //sh "cd /var/lib/jenkins/workspace/rahjava7 \n /usr/bin/mvn clean"
         //sh "cd /var/lib/jenkins/workspace/rahjava7 \n /usr/bin/mvn install"
         //sh 'cd /var/lib/jenkins/workspace/rahjava7 \n /usr/bin/mvn clean install'
@@ -34,7 +34,7 @@ node{
         
       
     }
-    
+    /*
     stage('Run Docker Compose File')
     {
         
@@ -43,7 +43,7 @@ node{
         sh 'sudo docker-compose up -d'
         //sh 'sudo docker-compose run'
     }
-    /*
+    
     
     stage('Deploy App')
     {
